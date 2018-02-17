@@ -51,7 +51,10 @@ $(document).ready(function(){
 		daywiseevent(day);
 		$('#event-schedule').removeClass('nactive')
 		$('#event-schedule').addClass('active')
-		// $('.grid-cont')
+		dayschedule.forEach(function(sch){
+		$('#event-schedule').append("<div class='grid-schd-cont'> <div class='grid-schd-item'>"+sch.etime+" - "+sch.stime+"</div><div class='grid-schd-item'><i class='fa fa-calendar' style='padding-right: 1em;'></i><strong>&nbsp;&nbsp;&nbsp;"+sch.ename+"</strong><br><i class='fa fa-compass' style='padding-right: 1em;'></i>&nbsp;"+sch.venue+"<br>"+sch.round+"</div></div>")
+		})
+		
 	})
 
 	$('.downnav').on('click', function(){
