@@ -46,15 +46,30 @@ $(document).ready(function(){
 	$('.grid-item').on('click', function(){
 		$('#view-schd').addClass('nactive');
 		// $('.grid-cont').removeClass('grid-cont');
-		var day = $(this).attr('id').substring(3);
+		var day = $(this).attr('id');
 		// console.log(day)
-		daywiseevent(day);
+		daywiseevent(day.substring(3));
 		$('#event-schedule').removeClass('nactive')
 		$('#event-schedule').addClass('active')
+		// $('#schedule-day-cont').empty()
+		$('#schedule-day-cont').each(function(i, ele){
+			console.log(i +": "+ele)
+		})
+		$('#day-title').text(day)
 		dayschedule.forEach(function(sch){
-		$('#event-schedule').append("<div class='grid-schd-cont'> <div class='grid-schd-item'>"+sch.etime+" - "+sch.stime+"</div><div class='grid-schd-item'><i class='fa fa-calendar' style='padding-right: 1em;'></i><strong>&nbsp;&nbsp;&nbsp;"+sch.ename+"</strong><br><i class='fa fa-compass' style='padding-right: 1em;'></i>&nbsp;"+sch.venue+"<br>"+sch.round+"</div></div>")
+			console.log("chal rha hai");
+			// console.log(sch);
+		$('#schedule-day-cont').append("<div class='grid-schd-cont'> <div class='grid-schd-item'>"+sch.etime+" - "+sch.stime+"</div><div class='grid-schd-item'><i class='fa fa-calendar' style='padding-right: 1em;'></i><strong>&nbsp;&nbsp;&nbsp;"+sch.ename+"</strong><br><i class='fa fa-compass' style='padding-right: 1em;'></i>&nbsp;"+sch.venue+"<br>"+sch.round+"</div></div>")
 		})
 		
+	})
+
+	$('#back-schd').on('click', function(){
+		$('#event-schedule').removeClass('active')
+		$('#event-schedule').addClass('nactive')
+		$('#view-schd').removeClass('nactive')
+		$('#view-schd').addClass('active')
+		$('#schedule-day-cont').empty()
 	})
 
 	$('.downnav').on('click', function(){
@@ -171,7 +186,7 @@ function categorydetail(){
 function eventdetail(){
 	$.ajax({
 		type: 'GET',
-		url: 'http://gamma.mitrevels.in/api/events',
+		url: 'http://gamma.mitrevels.in/api/events/',
 		success: function(events) {
 			// console.log(events.data[cunt])
 			events.data.sort(predicateBy('ename'))
@@ -191,7 +206,7 @@ function eventdetail(){
 function schedule(){
 	$.ajax({
 		type: 'GET',
-		url: 'http://gamma.mitrevels.in/api/schedule',
+		url: 'http://gamma.mitrevels.in/api/schedule/',
 		success: function(scheduledata){
 			allschedule = scheduledata.data;
 		}
@@ -200,6 +215,7 @@ function schedule(){
 
 function daywiseevent(day){
 	var c = 0;
+	dayschedule.length = 0;
 	allschedule.forEach(function(scheduled){
 		if(scheduled.day == day){
 			dayschedule[c++] = scheduled;
@@ -224,6 +240,9 @@ function predicateBy(prop){
 
 function searchevent(i){
 	var c = 0;
+	// eventdetails.length = 0;
+	// eventdetails.splice(0, eventdetails.length);
+	// console.log(eventdetails)
 	alleventsdetail.forEach(function(eventsd){
 		if(eventsd.cid==i){
 			// console.log(eventsd)
