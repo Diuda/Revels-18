@@ -34,6 +34,11 @@ $(document).ready(function(){
 		
 	})
 
+	$('#teambt').on('click', function(){
+		$('.team-row').removeClass('nactive');
+		$('.team-row').addClass('active');
+	})
+
 	$('#sch').on('click', function(){
 		// console.log("hello")
 
