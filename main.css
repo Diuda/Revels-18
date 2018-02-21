@@ -193,6 +193,15 @@ body{
 
 }
 
+
+.logo-img-cont{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  font-family: 'catlog';
+}
+
 #right-event{
     right: 0;
   position: absolute;
