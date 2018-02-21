@@ -119,7 +119,13 @@ body{
   background-color: #9A233A;
 }
 
+#lnav1, #rnav1 {
+  display: none;
+}
 
+#unav, #dnav {
+  display: fixed;
+}
 /*#category-name{
 
 
