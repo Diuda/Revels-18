@@ -2,9 +2,12 @@
 <html lang="en"> 
 <head>
 	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="animate.css">
+	<link rel="stylesheet" type="text/css" href="schedule.css">
+	<link rel="stylesheet" type="text/css" href="events.css">
 	<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -36,9 +39,10 @@
 				
 				<div class="logo-img">
 					<div id="left-event" class="anim">
-						<i class="fa fa-angle-up fa-4x upnav"></i>
-
-						<i class="fa fa-angle-down fa-4x downnav"></i>
+						<i class="fa fa-angle-up fa-4x upnav" id="unav"></i>
+						<i class="fa fa-chevron-circle-left fa-4x upnav" id="lnav1"></i>
+						<i class="fa fa-chevron-circle-right fa-4x downnav" id="rnav1"></i>
+						<i class="fa fa-angle-down fa-4x downnav" id="dnav"></i>
 					</div>
 					<div id="right-event">
 						<div id="category-detail" class="cont-c">
@@ -55,10 +59,11 @@
 						</div>
 						<div class="events-name">
 							
-							<i class="fa fa-chevron-circle-left fa-4x leftnav "></i>
+							<i class="fa fa-chevron-circle-left fa-4x leftnav" id="lnav"></i>
+							<i class="fa fa-angle-left fa-4x leftnav" id="lnav2"></i>
 								<span id="event-name"></span>
-
-							<i class="fa fa-chevron-circle-right fa-4x rightnav"></i>
+							<i class="fa fa-angle-right fa-4x rightnav" id="rnav2"></i>
+							<i class="fa fa-chevron-circle-right fa-4x rightnav" id="rnav"></i>
 
 						</div>
 					</div>
