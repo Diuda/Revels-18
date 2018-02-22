@@ -379,10 +379,10 @@ body{
 
 
 .box {
-    width:100%;
-    height:40em;
-    background:#FFF;
-    margin:40px auto;
+    width: 100%;
+    height: 40em;
+    background: #FFF;
+    margin: 0;
 }
 
 .effect5{
