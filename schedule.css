@@ -3,6 +3,8 @@
 	*
 	{
 		overflow: hidden;
+        margin: 0;
+        padding: 0;
 	}
 
     
@@ -19,7 +21,6 @@
 
 	#sch-title, #day-title {
     font-size: 3em;
-    padding-top: em;
     margin-top: -10%;
 }
 
@@ -34,12 +35,11 @@
 	}
 
 .grid-cont {
-    margin-top: 0%;
-    margin-left: 0%;
+    
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px;
-    height: 86%;
+    padding: 0;
+    height: 81%;
     width: 100%;
 	}
 
