@@ -1,4 +1,6 @@
-if ($(window).width() >= 1024) {
+$(document).ready(function()
+{
+    if ($(window).width() >= 1024) {
     // forEach method
     var forEach = function(array, callback, scope) {
         for (var i = 0; i < array.length; i++) {
@@ -21,12 +23,14 @@ if ($(window).width() >= 1024) {
             if (this.classList.contains('current')) {
                 this.classList.toggle("focus");
             }
+            console.log(images[i]);
         })
         start = start + degInt;
     });
 
     function setCurrent(current) {
         document.querySelector('figure#spinner figure:nth-child(' + current + ')').classList.add('current');
+        // console.log(current);
     }
 
     function galleryspin(sign) {
@@ -47,14 +51,15 @@ if ($(window).width() >= 1024) {
             if (current == 0) { current = numpics; }
         }
 
-        // console.log(current);
+        console.log(spinner);
         spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg)");
         setCurrent(current);
     }
 
-
+    // console.log("asd");
 
     document.body.onkeydown = function(e) {
+        // console.log(e);
         switch (e.which) {
             case 37: // left cursor
                 galleryspin('');
@@ -72,3 +77,4 @@ if ($(window).width() >= 1024) {
 
     setCurrent(1);
 }
+});
