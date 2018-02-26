@@ -9,14 +9,10 @@
     url('../font/CaviarDreams.ttf') format('truetype'), ;
 }
 
-body
-{
-    overflow-y: auto;
-}
-
 *
 {
     box-sizing: border-box;
+    /*overflow: visible !important;*/
 }
 
 .carouselbody
@@ -24,6 +20,11 @@ body
     font-family: 'Bebas', sans-serif;
     color: #fff;
     background: #000000;
+}
+
+.carouselbody *
+{
+    overflow: visible;
 }
 
 .cartitle
