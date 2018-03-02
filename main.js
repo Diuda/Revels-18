@@ -25,9 +25,13 @@ $(document).ready(function(){
 	$('#cate').on('click', function(){
 		// console.log("hello")
 
+
+		$('#category-detail').remove()
+		$('#event-detail').remove()
 		$('#category').removeClass('nactive');
 		$('#category').addClass('active');
 		categorydetail();
+
 		
 		
 		
@@ -37,6 +41,11 @@ $(document).ready(function(){
 	$('#teambt').on('click', function(){
 		$('.team-row').removeClass('nactive');
 		$('.team-row').addClass('active');
+	})
+
+	$('#conv').on('click', function(){
+		// console.log('hello hi bye')
+		// $('#contact-container').css('display', 'block')
 	})
 
 	$('#sch').on('click', function(){
@@ -77,51 +86,96 @@ $(document).ready(function(){
 		$('#schedule-day-cont').empty()
 	})
 
+
+	$('#back-schd-home').on('click', function(){
+		$('#schedule-cont').removeClass('active')
+		$('#schedule-cont').addClass('nactive')
+	})
+
 	$('.downnav').on('click', function(){
 		
+
+		$('#event-detail').remove()
+		$('#category-detail').remove()
 		cunt2 = 0;
-		$('#left-event').removeClass(cat[cunt++])
+		// $('.logo-img-cont').removeClass(cat[cunt++])
+		$('.logo-img-cont').remove();
+		// $('#event-detail').remove();
+		cunt++;
+		// $('.logo-img-cont').removeClass('fadeInUp')
+		// $('.logo-img-cont').addClass('fadeOutUp')
 		if(cunt==14){
 			cunt = 0;
 		}
 		$('.logo').css('background-color', background[cunt])
-		$('#right-event').css('background-color', details[cunt])
+		
 		$('.events-name').css('background-color', event[cunt])
 		console.log(cat[cunt])
-		$('#left-event').addClass(cat[cunt])
+		// $('.logo-img-cont').addClass(cat[cunt])
+		$('#left-event').append('<div class="logo-img-cont animated fadeInUp '+cat[cunt]+'"></div>')
+		$('#right-event').append('<div id="category-detail" class="cont-c animated"><span id="category-name" class="title-c">'+categorydetails[cunt].cname+'</span><span id="cat-desc">'+categorydetails[cunt].cdesc+'</span></div>')
+		// $('.logo-img-cont').addClass('fadeOutUp')
+		// $('.logo-img-cont').addClass('fadeInUp')
+		$('#right-event').css('background-color', details[cunt])
 		$('#category-detail').css('display', 'block')
-		$('#event-detail').css('display', 'none')
-		$('#category-name').text(categorydetails[cunt].cname)
-		$('#cat-desc').text(categorydetails[cunt].cdesc)
 		searchevent(categorydetails[cunt].cid);
 		$('#event-name').text(eventdetails[cunt2].ename)
+
 	})
 
 	$('.rightnav').on('click', function(){
 		// console.log(eventdetails)
-		if(cunt2 == eventdetails.length){
+		$('#event-detail').remove()
+		$('#category-detail').remove()
+		
+		// $('#event-detail').addClass('slideInRight')
+		// cunt2++;
+		if(cunt2 == eventdetails.length-1){
+			// console.log("whadup")
 			cunt2=-1;
 		}
-		$('#event-name').text(eventdetails[++cunt2].ename)
+		
+		$('#right-event').append('<div id="event-detail" class="cont-c animated slideInRight"><span id="event-name-title" class="title-c">'+eventdetails[++cunt2].ename+'</span><div id="cont-event"><span id="event-desc">'+eventdetails[cunt2].edesc+'</span><br><span id="team-size">'+eventdetails[cunt2].emaxteamsize+'</span><span id="poc">Contact Name: '+eventdetails[cunt2].cntctname+'<br/>Contact No: '+eventdetails[cunt2].cntctno+'</span></div></div>')
+
+		// // 
+		$('#event-name').text(eventdetails[cunt2].ename)
+		$('#event-name-title').text(eventdetails[cunt2].ename)
+		
+		// $('#event-desc').text(eventdetails[cunt2].edesc)
+		// $('#team-size').text("Max Team Size: "+eventdetails[cunt2].emaxteamsize)
+		// $('#poc').html("Contact Name: "+eventdetails[cunt2].cntctname+"<br/>Contact No: "+eventdetails[cunt2].cntctno)
 		console.log(cunt2)
 	})
 
 	$('.leftnav').on('click', function(){
 		// console.log("hello")
 
-		$('#event-name').text(eventdetails[--cunt2].ename)
+		// $('#event-name').text(eventdetails[--cunt2].ename)
+		$('#event-detail').remove()
+		$('#category-detail').remove()
+
 		if(cunt2==0){
 			cunt2 = eventdetails.length;
 		}
+		cunt2--;
+		$('#right-event').append('<div id="event-detail" class="cont-c animated slideInLeft"><span id="event-name-title" class="title-c">'+eventdetails[cunt2].ename+'</span><div id="cont-event"><span id="event-desc">'+eventdetails[cunt2].edesc+'</span><br><span id="team-size">'+eventdetails[cunt2].emaxteamsize+'</span><span id="poc">Contact Name: '+eventdetails[cunt2].cntctname+'<br/>Contact No: '+eventdetails[cunt2].cntctno+'</span></div></div>')
+
+		$('#event-name').text(eventdetails[cunt2].ename)
+		$('#event-name-title').text(eventdetails[cunt2].ename)
+
+
 		console.log(cunt2)
 	})
 
 	$('.upnav').on('click', function(){
 		
-
-		
+		$('#event-detail').remove()
+		$('#category-detail').remove()
+		$('.logo-img-cont').remove();
+		$('#event-detail').remove();
+		cunt--;
 		cunt2 = 0;
-		$('#left-event').removeClass(cat[cunt--])
+		// $('.logo-img-cont').removeClass(cat[cunt--])
 
 		if(cunt==-1){
 			cunt = 13;
@@ -132,23 +186,32 @@ $(document).ready(function(){
 		$('.events-name').css('background-color', event[cunt])
 		console.log(categorydetails);
 		// console.log(cat[cunt])
-		$('#left-event').addClass(cat[cunt])
+		$('#left-event').append('<div class="logo-img-cont animated fadeInDown '+cat[cunt]+'"></div>')
+		$('#right-event').append('<div id="category-detail" class="cont-c animated"><span id="category-name" class="title-c">'+categorydetails[cunt].cname+'</span><span id="cat-desc">'+categorydetails[cunt].cdesc+'</span></div>')
+		// $('.logo-img-cont').addClass(cat[cunt])
 		$('#category-detail').css('display', 'block')
-		$('#event-detail').css('display', 'none')
-		$('#category-name').text(categorydetails[cunt].cname)
-		$('#cat-desc').text(categorydetails[cunt].cdesc)
+		// $('#event-detail').css('display', 'none')
+		// $('#category-name').text(categorydetails[cunt].cname)
+		// $('#cat-desc').text(categorydetails[cunt].cdesc)
 		searchevent(categorydetails[cunt].cid);
 		$('#event-name').text(eventdetails[cunt2].ename)
 
 	})	
 
 	$('#event-name').on('click', function(){
+		console.log("Event name")
+		// $('#category-detail').css('display', 'none')
+		// $('#category-detail').addClass('zoomOut');	
 		$('#category-detail').css('display', 'none')
-		$('#event-detail').css('display', 'block')
-		$('#event-name-title').text(eventdetails[cunt2].ename)
-		$('#event-desc').text(eventdetails[cunt2].edesc)
-		$('#team-size').text("Max Team Size: "+eventdetails[cunt2].emaxteamsize)
-		$('#poc').html("Contact Name: "+eventdetails[cunt2].cntctname+"<br/>Contact No: "+eventdetails[cunt2].cntctno)
+		// $('#event-detail').css('display', 'block')
+		// $('#event-detail').addClass('zoomIn');
+
+		$('#right-event').append('<div id="event-detail" class="cont-c animated zoomIn"><span id="event-name-title" class="title-c">'+eventdetails[cunt2].ename+'</span><div id="cont-event"><span id="event-desc">'+eventdetails[cunt2].edesc+'</span><br><span id="team-size">'+eventdetails[cunt2].emaxteamsize+'</span><span id="poc">Contact Name: '+eventdetails[cunt2].cntctname+'<br/>Contact No: '+eventdetails[cunt2].cntctno+'</span></div></div>')
+		
+		// $('#event-name-title').text(eventdetails[cunt2].ename)
+		// $('#event-desc').text(eventdetails[cunt2].edesc)
+		// $('#team-size').text("Max Team Size: "+eventdetails[cunt2].emaxteamsize)
+		// $('#poc').html("Contact Name: "+eventdetails[cunt2].cntctname+"<br/>Contact No: "+eventdetails[cunt2].cntctno)
 		console.log(eventdetails[cunt2])
 	})
 
@@ -162,6 +225,8 @@ $(document).ready(function(){
 		$('#left').addClass('zoomOutLeft')
 		$('#right').addClass('zoomOutRight')
 	})
+
+	 
 
 })
 
@@ -182,7 +247,8 @@ function categorydetail(){
 			eventdetail();
 			$('#category-name').text(categorydetails[cunt].cname)
 			$('#cat-desc').text(categorydetails[cunt].cdesc)
-			
+			$('#right-event').append('<div id="category-detail" class="cont-c animated"><span id="category-name" class="title-c">'+categorydetails[cunt].cname+'</span><span id="cat-desc">'+categorydetails[cunt].cdesc+'</span></div>')
+			// $('#right-event').append('<div class="events-name"><i class="fa fa-chevron-circle-left fa-4x leftnav" id="lnav"></i><span id="event-name"></span><i class="fa fa-chevron-circle-right fa-4x rightnav" id="rnav"></i></div>')
 		}
 	})
 
@@ -202,6 +268,7 @@ function eventdetail(){
 			alleventsdetail = events.data;
 			console.log(alleventsdetail)
 			searchevent(categorydetails[cunt].cid)
+
 			$('#event-name').text(eventdetails[cunt2].ename)
 			
 		}
