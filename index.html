@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Revels '18</title>
@@ -12,9 +11,12 @@
 	<link rel="stylesheet" type="text/css" href="animate.css">
 	<link rel="stylesheet" type="text/css" href="schedule.css">
 	<link rel="stylesheet" type="text/css" href="events.css">
+  <link rel="stylesheet" type="text/css" href="carousel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="carousel.js"></script>
 	<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	<script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript">
 		// navigator.serviceWorker.register('./sw.js').then(function(){
@@ -322,11 +324,11 @@ function main() {
   </svg>
    <div class="text" style="font-family: Questrial, sans-serif;"><a >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENTS</a></div>
 </div>
-<div class="svg-wrapper1 animated bounceIn delay-2">
+<div class="svg-wrapper1 animated bounceIn delay-2" id="teambt">
   <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
     <rect class="shape" height="60" width="320" />
   </svg>
-   <div class="text" style="font-family: Questrial, sans-serif;"><a id="teambt">&nbsp;MEET THE TEAM</a></div>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a>&nbsp;MEET THE TEAM</a></div>
 </div>
 <div class="svg-wrapper2 animated bounceIn delay-1">
   <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
@@ -346,15 +348,17 @@ function main() {
   </svg>
    <div class="text" style="font-family: Questrial, sans-serif;"><a href="http://proshow.mitrevels.in" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROSHOW</a></div>
 </div>
-<div class="svg-wrapper5 animated bounceIn delay-4">
+<div class="svg-wrapper5 animated bounceIn delay-4" id="conv">
   <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
     <rect class="shape" height="60" width="320" />
   </svg>
-   <div class="text" style="font-family: Questrial, sans-serif;"><a id="conv">&nbsp;&nbsp;&nbsp;CONTACT US</a></div>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a >&nbsp;&nbsp;&nbsp;CONTACT US</a></div>
 </div>
 <div id="category" class="nactive"> 
 
 		<span class="close">&times;</span>
+
+
 
 
 
@@ -388,7 +392,7 @@ function main() {
 						</div>
 
 
-						<div class="events-name">
+						<div class="events-name" >
 							
 							<i class="fa fa-chevron-circle-left fa-4x leftnav" id="lnav"></i>
 								<span id="event-name"></span>
@@ -432,7 +436,8 @@ function main() {
 	</div>
 
 
-        <div class="team-row nactive">
+        <div class="team-row nactive" id="teamvaladiv">
+          <span class="close" id="meetclose" style="z-index: 6; color: white;">&times;</span>
             <div class="carouselbody">
                 <h1 class="cartitle"> Meet The Team </h1>
                 <div id="carousel">
@@ -499,6 +504,37 @@ function main() {
             </div>
         </div>
     </div>
+
+
+
+    <div id="contactus" class="nactive">
+      <span class="close" style="color: white;">&times;</span>
+      <div class="animatedrev1 fadeInDownrev1" style="font-size:70px;font-family:'Questrial',sans-serif;">
+      </div>
+      <div style="width:100%">
+    <p align="left" style="font-family:'Questrial', sans-serif;font-size:40px;font-weight:100;color:white;display:none;left:10%;position: relative;"class="appear" id="ct">CULTURAL TEAM</p>
+    <p align="right" style="font-family:'Questrial', sans-serif;font-size:40px;font-weight:100;color:white;display:none;left:45%;position:relative;"class="appear" id="st">SPORTS TEAM</p>
+  </div>
+    <br>
+    <br>
+    <div class="animatedrev1 fadeInDownrev2" id="dabba" style="display: none;">
+
+    <ul align="center" class="ul1" style="margin-right:80px;">
+  <li class="cf1"> <a href="#" align="center" style="color:white;"><button>REGISTRATION</button></a> </li>
+  <li> <a href="#" align="center" style="color:white;"><button>INFODESK</button></a></li>
+  <li> <a href="http://proshow.mitrevels.in" align="center" style="color:white;"><button>PARTH GUPTA</button></a> </li>
+  <li> <a href="http://revelscup.mitrevels.in" align="center" style="color:white;"><button>SOUMYA YALLA</button></a> </li>
+  <li  id="dontdisp" class="highlighted" align="center" style="color:white;"> <a href="#"><button>RESULTS</button></a> </li>
+  <li> <a href="#" align="center" style="color:white;"><button>SUSHRUT</button></a> </li>
+  <li> <a href="#" align="center" style="color:white;"><button>PARIDHI SHIROHI</button></a></li>
+  <li> <a href="#" align="center" style="color:white;"><button>T-shirts</button></a></li>
+  <li> <a href="#" align="center" style="color:white;"><button>Operations</button></a></li>
+</ul>
+</div>
+<script>
+  document.getElementById('dontdisp').style.opacity=0;
+</script>
+</div>
 </body>
 
 </html>

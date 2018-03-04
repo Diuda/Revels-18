@@ -17,9 +17,12 @@
 
 .carouselbody
 {
+    position: relative;
     font-family: 'Bebas', sans-serif;
     color: #fff;
-    background: #000000;
+    overflow-y: scroll;
+    top: 4em;   
+    /*background: #000000;*/
 }
 
 .carouselbody *
@@ -48,10 +51,10 @@ div#carousel
     font-size: 0;
 
     margin-bottom: 3rem;
-    margin-left: -6vw;
+    margin-left: 0vw;
     padding-top: 5%;
 
-    background: #000000;
+    background: transparent;
 
     perspective: 1200px;
 }
