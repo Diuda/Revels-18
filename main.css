@@ -32,9 +32,7 @@ body{
 }
 
 #main_container{
- 
-  margin: 0;
-  padding: 0;
+  /*position: relative;*/
 }
 
 
@@ -216,7 +214,7 @@ body{
 }
 
 #schedule-day-cont{
-  position: initial;
+  position: absolute;
   width: 100%;
   height:100%;
 }
@@ -372,6 +370,8 @@ body{
 
 
 
+
+
 .grid-item:hover{
   cursor: pointer;
   background: #b0bec5;
@@ -379,10 +379,10 @@ body{
 
 
 .box {
-    width: 100%;
-    height: 40em;
-    background: #FFF;
-    margin: 0;
+    width:70%;
+    height:40em;
+    background:#FFF;
+    margin:40px auto;
 }
 
 .effect5{
@@ -731,5 +731,89 @@ html {
   border-radius: 50%;
 }
 
+/* --------Sponsors-------- */
+
+.sponsors {
+  
+  overflow: none;
+  background-color: #fff;
+}
+
+#stitle {
+
+  text-align: center;
+}
 
 
+.sp1 {
+    /*display: flex;*/
+    height: 40vh;
+    width: 25vw;
+    margin-left: 37%;
+    margin-top: 0;
+}
+
+.spimg1 {
+    width: 100%;
+    height: 40vh;
+}
+
+.st1 {
+    text-align: center;
+    margin-left: -2%;
+    margin-top: 0%;
+}
+
+.sp2 {
+
+  /* display: inline-flex;*/
+    width: 20vw;
+    height: 30vh;
+    margin-left: 12%;
+    position: initial;
+}
+
+.spimg2 {
+    width: 100%;
+    height: 20vh;
+    margin-left: 0%;
+}
+
+.st2 {
+    margin-top: -4%;
+    margin-left: 17%;
+}
+
+.sp3 {
+
+    /*display: inline-flex;*/
+    position: absolute;
+    width: 20vw;
+    height: 30vh;
+    margin-left: 65%;
+    margin-top: -12%;
+}
+.spimg3 {
+    width: 100%;
+    height: 20vh;
+    margin-left: 0%;
+}
+
+.st3 {
+   
+    margin-top: -3%;
+    margin-left: 69%;
+}
+ .sclose {
+
+    margin-left: 80%;
+    margin-top: -8%;
+    position: absolute;
+    z-index: 1;
+    padding-top: 0.8em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.2em;
+    font-size: 3em;
+    cursor: pointer;
+ }
