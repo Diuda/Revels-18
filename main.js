@@ -211,6 +211,9 @@ $(document).ready(function(){
 
 	$('#event-name').on('click', function(){
 		console.log("Event name")
+
+		$('#category-detail').remove()
+		$('#event-detail').remove()
 		// $('#category-detail').css('display', 'none')
 		// $('#category-detail').addClass('zoomOut');	
 		$('#category-detail').css('display', 'none')
