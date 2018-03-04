@@ -1,7 +1,7 @@
 
 *
 {
-  /*overflow: hidden;*/
+  /*overflow-y: scroll;*/
 }
   
 .active{
@@ -32,9 +32,7 @@ body{
 }
 
 #main_container{
- 
-  margin: 0;
-  padding: 0;
+  /*position: relative;*/
 }
 
 
@@ -61,6 +59,8 @@ body{
   height:100%;
   background-color: black;
   position: absolute;
+  top: 0;
+  overflow-y: scroll;
 }
 
 .grid-cont{
@@ -160,6 +160,7 @@ body{
   margin: 15% auto;
   width: 100%;
   font-family: 'Questrial', sans-serif;
+  overflow-y: scroll;
 }
 
 
@@ -170,6 +171,7 @@ body{
   margin: 2% auto;
   width: 100%;
   font-family: 'Questrial', sans-serif; 
+  overflow-y: scroll;
 }
 
 #team-size{
@@ -239,7 +241,7 @@ body{
 }
 
 #schedule-day-cont{
-  position: initial;
+  position: absolute;
   width: 100%;
   height:100%;
 }
@@ -323,6 +325,7 @@ body{
   position: absolute;
   height: 100%;
   width: 100%;
+  top: 0;
   margin: 0px auto;
 }
 
@@ -404,6 +407,8 @@ body{
 
 
 
+
+
 .grid-item:hover{
   cursor: pointer;
   background: #b0bec5;
@@ -411,10 +416,10 @@ body{
 
 
 .box {
-    width: 100%;
-    height: 40em;
-    background: #FFF;
-    margin: 0;
+    width:70%;
+    height:40em;
+    background:#FFF;
+    margin:40px auto;
 }
 
 .effect5{
@@ -728,6 +733,7 @@ html {
   background: black;
   top: 0;
   font-family: 'Questrial', sans-serif;
+  overflow-y: scroll;
 }
 
 
@@ -1186,6 +1192,9 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
 @media screen and (max-width:1439px){
    .nav2 a{
     padding:15px 91px;
+  }
+  #contactus_container{
+    margin-left:4%;
   }
 
 }
