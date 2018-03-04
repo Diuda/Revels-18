@@ -32,7 +32,9 @@ body{
 }
 
 #main_container{
-  /*position: relative;*/
+ 
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -214,7 +216,7 @@ body{
 }
 
 #schedule-day-cont{
-  position: absolute;
+  position: initial;
   width: 100%;
   height:100%;
 }
@@ -370,8 +372,6 @@ body{
 
 
 
-
-
 .grid-item:hover{
   cursor: pointer;
   background: #b0bec5;
@@ -379,10 +379,10 @@ body{
 
 
 .box {
-    width:70%;
-    height:40em;
-    background:#FFF;
-    margin:40px auto;
+    width: 100%;
+    height: 40em;
+    background: #FFF;
+    margin: 0;
 }
 
 .effect5{
