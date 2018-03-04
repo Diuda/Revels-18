@@ -1,7 +1,10 @@
 @media only screen and (max-width: 800px) {
 
 .sponsors {
-	overflow: none;
+	overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin-top: -121.5%;
 }
 
 #stitle {
@@ -24,7 +27,6 @@
 
 .st1 {
     text-align: center;
-    margin-left: -2%;
     margin-top: 0%;
 }
 
@@ -70,6 +72,61 @@
 
     margin-left: 74%;
     position: absolute;
-    margin-top: -30%;
+    margin-top: -20%;
 }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+.sponsors {
+
+    margin-top: -139%;
+}
+
+
+}
+/* iPhone 5 ----------- */
+
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+
+.sponsors {
+    margin-top: -139%;
+
+}
+
+}
+
+/* iPhone 6 ----------- */
+
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+
+.sponsors {
+     margin-top: -133.3%;
+}
+
+}
+
+/* iPhone 6+ ----------- */
+
+
+@media only screen and (min-device-width: 412px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+
+.sponsors {
+     margin-top: -139%;
+}
+
+}
+
+
+/* Samsung Galaxy S5 ----------- */
+
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+
+.sponsors {
+     margin-top: -139%;
+}
+
 }
