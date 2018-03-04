@@ -3,7 +3,11 @@
 	*
 	{
 		overflow: hidden;
+        margin: 0;
+        padding: 0;
 	}
+
+    
 
 	.title 
 	{
@@ -12,11 +16,11 @@
     background: #FF6262;
     padding-top: 2em;
     padding-bottom: 2em;
+    width: 100%;
 	}
 
 	#sch-title, #day-title {
     font-size: 3em;
-    padding-top: em;
     margin-top: -10%;
 }
 
@@ -31,12 +35,11 @@
 	}
 
 .grid-cont {
-    margin-top: -10%;
-    margin-left: -4%;
+    
     display: grid;
     grid-template-columns: auto auto;
-    padding: 10px;
-    height: 60%;
+    padding: 0;
+    height: 81%;
     width: 100%;
 	}
 
@@ -49,9 +52,9 @@
 
 .grid-schd-cont {
     margin-top: 0;
-    margin-left: -4%;
+    margin-left: 0%;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 24% 76%;
     padding: 10px;
     position: relative;
     width: 100%;
@@ -59,7 +62,7 @@
 
 .grid-schd-item {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     position: relative;
     /* top: 50%; */
