@@ -39,6 +39,18 @@ $(document).ready(function(){
 		$('.team-row').addClass('active');
 	})
 
+	$('#sponsbtn').on('click', function(){
+		$('.sponsors').removeClass('nactive');
+		$('.sponsors').addClass('active');
+	})
+
+	$('.sclose').on('click', function(){
+		
+		$('.sponsors').removeClass('active')
+		$('.sponsors').addClass('nactive')
+	})
+
+
 	$('#sch').on('click', function(){
 		// console.log("hello")
 
