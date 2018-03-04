@@ -82,6 +82,7 @@ body{
   padding: 10px;
   position: relative;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .border{
@@ -422,7 +423,7 @@ body{
     margin:40px auto;
 }
 
-.effect5{
+/*.effect5{
   position: relative;
 }
 
@@ -456,8 +457,7 @@ body{
   transform: rotate(8deg);
   right: 10px;
   left: auto;
-  /*overflow:scroll;*/
-}
+}*/
 
 
 
@@ -781,7 +781,9 @@ html {
 /* --------Sponsors-------- */
 
 .sponsors {
-  
+/*  position: absolute;
+  width: 100%;
+  height: 100%;*/
   overflow: none;
   background-color: #fff;
 }

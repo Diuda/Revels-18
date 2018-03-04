@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
   mysqli_query($link,'SET CHARACTER SET utf8');
 
  
-  $query = mysqli_query($link,"select te.event_id,event_name,tc.cat_id,cat_name,round,venue,start_time,end_time,ts.day,date,ts.is_revels from tblevents te,tblcategories tc,schdl_pre ts where ts.cat_id=tc.cat_id AND te.event_id=ts.event_id") or die("could not establish a connection");
+  $query = mysqli_query($link,"select te.event_id,event_name,tc.cat_id,cat_name,round,venue,start_time,end_time,ts.day,date,ts.isRevels from tblevents te,tblcategories tc,schdl ts where ts.cat_id=tc.cat_id AND te.event_id=ts.event_id") or die("could not establish a connection");
   
  
 

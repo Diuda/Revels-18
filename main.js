@@ -61,6 +61,7 @@ $(document).ready(function(){
 
 
 	$('#sponsbtn').on('click', function(){
+		console.log("hello")
 		$('.sponsors').removeClass('nactive');
 		$('.sponsors').addClass('active');
 	})
@@ -320,11 +321,12 @@ function daywiseevent(day){
 	dayschedule.length = 0;
 	allschedule.forEach(function(scheduled){
 		if(scheduled.day == day){
+			console.log(scheduled)
 			dayschedule[c++] = scheduled;
 		}
 
 	})
-	console.log(dayschedule)
+	// console.log(dayschedule)
 }
 
 
