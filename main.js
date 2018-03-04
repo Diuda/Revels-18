@@ -59,6 +59,19 @@ $(document).ready(function(){
 		// $('#contact-container').css('display', 'block')
 	})
 
+
+	$('#sponsbtn').on('click', function(){
+		$('.sponsors').removeClass('nactive');
+		$('.sponsors').addClass('active');
+	})
+
+	$('.sclose').on('click', function(){
+		
+		$('.sponsors').removeClass('active')
+		$('.sponsors').addClass('nactive')
+	})
+
+
 	$('#sch').on('click', function(){
 		// console.log("hello")
 
