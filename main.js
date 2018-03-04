@@ -38,6 +38,17 @@ $(document).ready(function(){
 		
 	})
 
+	$("#conv").on('click', function(){
+    // document.getElementById('contactus').style.display="block";
+    $('#contactus').removeClass('nactive')
+    $('#contactus').addClass('active')
+    // document.getElementById('contact').style.display="none";
+    document.getElementById('dabba').style.display="block";
+    document.getElementById('ct').style.display="inline";
+    document.getElementById('st').style.display="inline";
+
+  });
+
 	$('#teambt').on('click', function(){
 		$('.team-row').removeClass('nactive');
 		$('.team-row').addClass('active');
@@ -216,10 +227,13 @@ $(document).ready(function(){
 	})
 
 	$('.close').on('click', function(){
+		console.log("sup")
 		var par = $(this).parent().closest('div').attr('id')
+		console.log(par)
 		$('#'+par).removeClass('active')
 		$('#'+par).addClass('nactive')
 	})
+
 
 	$('#open').on('click', function(){
 		$('#left').addClass('zoomOutLeft')
