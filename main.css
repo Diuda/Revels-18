@@ -1177,6 +1177,12 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
     opacity: 1;
     transform: translateY(0px);
 }
+@media screen and (max-width:1920px){
+
+#contactus_container{
+  margin-left: 10%;
+}
+}
 @media screen and (max-width:1439px){
    .nav2 a{
     padding:15px 91px;
