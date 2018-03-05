@@ -124,6 +124,15 @@
     	padding-left: 5em;
     	padding-top: 1.2em;
     }
+
+    #lnav2 {
+		left: -10%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -10%;
+		top: 20%;
+	}
 }
 
 
@@ -144,6 +153,14 @@
 		bottom: 12%;
 		left: 77%;
 	}
+	#lnav2 {
+		left: -8%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -8%;
+		top: 20%;
+	}
 
 }
 
@@ -158,6 +175,15 @@
     #lnav1{
 		top: 16%;
 		left: 14%;
+	}
+
+	#lnav2 {
+		left: -8%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -8%;
+		top: 20%;
 	}
 
 }
@@ -175,4 +201,12 @@
 		left: 12%;
 	}
 
+	#lnav2 {
+		left: -8%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -8%;
+		top: 20%;
+	}
 }
