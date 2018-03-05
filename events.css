@@ -63,12 +63,12 @@
     color: #dee6bf;
 	}
 
-	#lnav, #rnav, #unav, #dnav 
+	#lnav, #rnav, #unav, #dnav, #rnav2 
 	{
        display: none;
     }
 	
-	#lnav1, #rnav1, #lnav2, #rnav2 {
+	#lnav1, #rnav1, #lnav2{
 		display: block;
 	}
 
@@ -121,11 +121,13 @@
 
 .close
     {
-    	padding-left: 5em;
-    	padding-top: 1.2em;
+    	padding-left: 4em;
+    	padding-top: 1.8em;
     }
 <<<<<<< HEAD
 =======
+	
+	
 
     #lnav2 {
 		left: -5%;
@@ -134,16 +136,20 @@
 	#rnav2 {
 		right: -5%;
 		top: 20%;
+		display: none;
+		
 	}
 
 	
 	#poc {
-		margin-top: 38%;
+		
+		margin-top: 30%;
+    	font-size: 1.5em;
 
 	} 
 		
 	#team-size {
-		margin-top: 30%;
+		margin-top: 25%;
 		 
 	}
 
@@ -177,6 +183,7 @@
 	#rnav2 {
 		right: -8%;
 		top: 20%;
+		display: block;
 	}
 
 	
@@ -221,6 +228,7 @@
 	#rnav2 {
 		right: -8%;
 		top: 20%;
+		display: block;
 	}
 
 	
@@ -262,6 +270,7 @@
 	#rnav2 {
 		right: -8%;
 		top: 20%;
+		display: block;
 	}
 
 	
@@ -302,6 +311,7 @@
 	#rnav2 {
 		right: -8%;
 		top: 20%;
+		display: block;
 	}
 
 	#poc {
