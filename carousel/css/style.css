@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Outline');
+
+@font-face
+{
+    font-family: 'Bebas';
+
+    src: url('../font/CaviarDreams.ttf');
+    src: url('CaviarDreams.ttf') format('ttf'),
+    url('../font/CaviarDreams.ttf') format('truetype'), ;
+}
+
+body
+{
+    overflow-y: auto;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.carouselbody
+{
+    font-family: 'Bebas', sans-serif;
+    color: #fff;
+    background: #000000;
+}
+
+.cartitle
+{
+  text-align: center;
+  font-family: 'Bebas', sans-serif;
+  /*padding-left: 6vw;*/
+}
+
+p
+{
+    font-size: 1rem;
+
+    margin-top: 8rem;
+
+    color: #777;
+}
+
+div#carousel
+{
+    font-size: 0;
+
+    margin-bottom: 3rem;
+    margin-left: -6vw;
+    padding-top: 5%;
+
+    background: #000000;
+
+    perspective: 1200px;
+}
+
+figure#spinner
+{
+    height: 300px;
+
+    transition: 1s;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50% -400px;
+
+    transform-style: preserve-3d;
+     /*-webkit-box-reflect: below;*/
+}
+
+figure#spinner figure
+{
+    position: absolute;
+    left: 40%;
+
+    overflow: hidden;
+
+    width: 20%;
+    max-width: 500px;
+
+    transition: 1s;
+    transform-origin: 50% 50% -400px;
+
+    outline: 1px solid transparent;
+}
+
+figure#spinner figure.focus
+{
+    left: 37%;
+
+    width: 26%;
+    margin-top: -3rem;
+}
+
+figure#spinner figure img
+{
+    width: 100%;
+}
+
+figcaption
+{
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+
+    transition: .6s;
+}
+
+figure#spinner figure.current:hover figcaption,
+figure#spinner figure.current.caption figcaption
+{
+    top: 50%;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, .8);
+}
+
+div#carousel ~ span
+{
+    font-size: 2rem;
+    line-height: 0;
+
+    position: relative;
+
+    display: inline-block;
+
+    margin: 5%;
+    margin-top: -6rem;
+
+    transition: .6s color;
+    text-decoration: none;
+
+    color: #fff;
+    border-bottom: none;
+}
+
+div#carousel ~ span:hover
+{
+    cursor: pointer;
+
+    color: #888;
+}
+
+.controls
+{
+    text-align: center;
+
+    color: #9e9e9e;
+}
+
+figcaption > p
+{
+    font-size: 1.1rem;
+
+    z-index: 2;
+
+    margin: 0;
+    padding: 1vh;
+    padding: .3rem;
+
+    transition: .6s;
+    text-align: center;
+
+    color: #fafafa;
+    background: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 1024px)
+{
+    *
+    {
+        /*border: 1px solid red;*/
+    }
+
+    .cartitle
+    {
+      font-size: 7vh;
+    }
+
+    div#carousel
+    {
+        perspective: 0;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    figure#spinner
+    {
+        position: relative;
+
+        display: flex;
+
+        height: auto;
+
+        transform-origin: center;
+
+        transform-style: flat;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        /*width: auto;*/
+    }
+
+    figure#spinner figure
+    {
+        position: relative;
+        left: 0;
+
+        display: flex;
+
+        width: 80vw;
+        max-width: none;
+        height: 60vh;
+        margin: 0 auto;
+        margin: 2vh 1vw;
+        padding: 0;
+
+        transform-origin: center;
+
+        background: white;
+
+        transform-style: flat;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    figure#spinner figure img
+    {
+        width: 30vh !important;
+        height: 30vh !important;
+        margin: 5vh auto;
+        border: 3px black solid;
+        box-sizing: border-box;
+    }
+
+    .controls
+    {
+        display: none;
+    }
+
+    figcaption
+    {
+      position: absolute;
+      font-size: 5vh;
+      z-index: 10;
+      top: 70%;
+      bottom: 0;
+    }
+
+    figcaption > p
+    {
+      color: #000;
+      font-size: 4vh;
+      z-index: 10;
+    }
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape)
+{
+  *
+  {
+    /*border: 1px solid blue;*/
+  }
+
+  figure#spinner figure
+  {
+    width: 35vw;
+  }
+
+  figure#spinner
+  {
+    flex-flow: row wrap;
+  }
+}

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+  <link rel="shortcut icon" type="image/ico" href="revels.ico"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Revels '18</title>
+	<meta name="theme-color" content="#000000" /> 
+  <link rel="stylesheet" type="text/css" href="main1.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="sponsors.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<link rel="stylesheet" type="text/css" href="schedule.css">
+	<link rel="stylesheet" type="text/css" href="events.css">
+  <link rel="stylesheet" type="text/css" href="carousel.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="carousel.js"></script>
+	<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		// navigator.serviceWorker.register('./sw.js').then(function(){
+		// 	console.log("registered");
+		// })
+	</script>
+
+<script src="https://use.fontawesome.com/ed547843f0.js"></script>
+<link rel="stylesheet" type="text/css" href="fontawesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="main_container">
+<!--  	<button id="cate" style="z-index: 1;">View Events</button>
+	<button id="sch">View Schdeule</button>
+	<button id="teambt">Meet Our Team</button>
+	<button id="conv">Contact Us</button> -->
+
+
+	
+	<!--Bro main kr rha tha lekin events kholne pe main page gayab ny ho rha tha main page k neeche hi aa jaa rha tha events wala page. isiliye comment out kr dia hai. Sham mein sath mein baith k kr lenge integrate.-->
+
+
+
+
+		 <script >
+
+
+      var main_C = document.getElementById('main_container')
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Easel = function () {
+  function Easel() {
+    _classCallCheck(this, Easel);
+
+    var activated = false;
+
+    if (!!window.CanvasRenderingContext2D) {
+      //cast existence to boolean
+      
+      this.activated = true;
+      this.setGlobalVariables();
+      this.acquireViewportSize();
+      this.background = '#000';
+      this.started = false;
+      main_C.appendChild(C);
+      {
+        var _d = document.createElement('style');
+        _d.type = 'text/css';
+        _d.rel = 'stylesheet';
+        _d.innerHTML = '\n        body{\n          background-color: ' + this.background + ';\n          margin:0;\n        }\n        canvas{\n          position:fixed;\n          left:0;top:0;right:0;bottom:0;\n        }';
+        D.querySelector('head').appendChild(_d);
+        this.setCanvasSize();
+      }
+      activated = true;
+    } //end if
+    return activated;
+  }
+
+  _createClass(Easel, [{
+    key: 'setGlobalVariables',
+    value: function setGlobalVariables() {
+      var _this = this; 
+      window.W = window;
+      window.D = document;
+      window.M = Math;
+      window.C = document.createElement('canvas');
+      window.ctx = C.getContext('2d');
+      window.R = function (f, g, e) {
+        f = !g ? 0 * (g = f) : f > g ? g + (d = f) - g : f;
+        e = e || 0;
+        g = M.random() * (g - f) + f;
+        return e ? g | 0 : g;
+      };
+      window.V = this.acquireViewportSize();
+      window.onresize = function () {
+        V = _this.acquireViewportSize();
+        _this.setCanvasSize();
+        _this.config();
+        _this.redraw();
+      };
+    }
+  }, {
+    key: 'redraw',
+    value: function redraw() {
+
+      if (!this.started) {
+        this.config();
+        this.started = true;
+      } //end if
+      this.beforeDraw();
+      this.onDraw();
+    }
+  }, {
+    key: 'config',
+    value: function config() {
+      return true;
+    }
+  }, {
+    key: 'beforeDraw',
+    value: function beforeDraw() {
+
+      ctx.fillStyle = this.background;ctx.fillRect(0, 0, V.w, V.h);
+    }
+  }, {
+    key: 'onDraw',
+    value: function onDraw() {
+      return true;
+    }
+  }, {
+    key: 'setCanvasSize',
+    value: function setCanvasSize() {
+      C.width = V.w;C.height = V.h;
+    }
+  }, {
+    key: 'acquireContext',
+    value: function acquireContext() {
+      return W.ctx = C.getContext('2d');
+    }
+  }, {
+    key: 'acquireViewportSize',
+    value: function acquireViewportSize() {
+      var d = W,
+          b = 'inner';
+
+      if (!d.innerWidth) {
+        b = 'client';
+        d = D.documentElement || D.body;
+      } //end if
+      return {
+        w: d[b + 'Width'],
+        h: d[b + 'Height']
+      };
+    }
+  }]);
+
+  return Easel;
+}();
+
+var Particle = function () {
+  function Particle() {
+
+    _classCallCheck(this, Particle);
+
+    this.x = R(0, V.w, 1);
+    this.y = R(0, V.h, 1);
+    this.z = R(0, 3, 1);
+    this.currentColor = this.generateColor();
+    this.targetColor = this.generateColor();
+    this.size = R(1, 3, 1);
+  }
+
+  _createClass(Particle, [{
+    key: 'move',
+    value: function move() {
+      if (this.x > 0 && R(0, 2, 1) > 0) {
+        this.x--;
+      } else if (this.x < V.w) {
+        this.x++;
+      } //end if
+      if (this.y > 0 && R(0, 2, 1) > 0) {
+        this.y--;
+      } else if (this.y < V.h) {
+        this.y++;
+      } //end if
+      ctx.fillStyle = this.getColor(false);
+      ctx.fillRect(this.x, this.y, this.size, this.size);
+    }
+  }, {
+    key: 'getColor',
+    value: function getColor(change) {
+
+      var r = void 0,
+          g = void 0,
+          b = void 0,
+          tc = this.targetColor,
+          cc = this.currentColor; //brevity
+
+      if (change) {
+        r = tc.r !== cc.r ? this.targetColor.r = tc.r > cc.r ? tc.r - 1 : tc.r + 1 : false;
+        g = tc.g !== cc.g ? this.targetColor.g = tc.g > cc.g ? tc.g - 1 : tc.g + 1 : false;
+        r = tc.b !== cc.b ? this.targetColor.b = tc.b > cc.b ? tc.b - 1 : tc.b + 1 : false;
+        if (!(r & g & b)) this.targetColor = this.generateColor();
+      } //end if
+      return 'rgba(' + tc.r + ',' + tc.g + ',' + tc.b + ',' + tc.a + ')';
+    }
+  }, {
+    key: 'generateColor',
+    value: function generateColor() {
+      return {
+        r: R(230, 100, 1),
+        g: R(220, 100, 1),
+        b: R(250, 100, 1),
+        a: 1
+      };
+    }
+  }]);
+
+  return Particle;
+}();
+
+var easel = new Easel(),
+    particle = new Particle(),
+    initialized = false;
+
+if (easel) {
+  easel.config = function () {
+    return easel.background = '#003';
+  };
+  main();
+} //end if
+
+function main() {
+  ctx.fillStyle = 'rgba(0,0,0,0.02)';
+  ctx.fillRect(0, 0, V.w, V.h);
+  for (var i = 0; i < 5000; i++) {
+    particle.move();
+  }if (R(0, 100, 1) < 5) particle.getColor(true); //graduate color
+  requestAnimationFrame(main);
+} //end main()
+//# sourceURL=pen.js
+        var revels =document.createElement('img');
+        revels.setAttribute("src", "Revels.svg");
+        revels.setAttribute("width", "100%");
+        revels.setAttribute("height", "60%");
+        revels.setAttribute("class", "revlog delay-0")
+        revels.setAttribute("id", "logo");
+        main_C.appendChild(revels);
+
+        // var eventdiv= document.createElement('div');
+        // eventdiv.setAttribute("class", "svg-wrapper");
+        // eventdiv.setAttribute("style", "position:absolute;");
+        // document.body.appendChild(eventdiv);
+        // var dabba = document.createElement('svg');
+        // dabba.setAttribute("height", "60");
+        // dabba.setAttribute("width","320");
+        // dabba.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        // eventdiv.appendChild(dabba);
+        // var recta= document.createElement('rect');
+        // recta.setAttribute("class", "shape");
+        // recta.setAttribute("height", "60");
+        // recta.setAttribute("width","320");
+        // dabba.appendChild(recta);
+        // var tex=document.createElement('div');
+        // tex.setAttribute("class", "text");
+        // tex.setAttribute("style", "color:white;");
+        // eventdiv.appendChild(tex);
+        // var link=document.createElement('a');
+        // link.setAttribute("href","load.html");
+        // link.innerHTML="Events";
+        // tex.appendChild(link);
+</script>
+
+
+<div id="socialmedia">
+<ul class='social'>
+  <li>
+    <a class="fa fa-facebook fa-2x" href="https://www.facebook.com/mitrevels">    
+      <span>Facebook</span>
+    </a> 
+  </li>
+  
+  <li>
+    <a class="fa fa-twitter fa-2x" href="https://twitter.com/revelsmit">
+      <span>Twitter</span>
+    </a>
+  </li>
+  
+  <li>
+    <a class="fa fa-instagram fa-2x" href="https://www.instagram.com/revelsmit/ ">
+      <span>Instagram</span>
+    </a>
+  </li>
+  
+  <li>
+    <a class="fa fa-youtube fa-2x" href="https://www.youtube.com/channel/UC9gwWd47a0q042qwEgutjWw">
+    <span>Youtube</span>
+    </a> 
+  </li>
+  
+</ul>
+</div>
+<div id="apps">
+<ul class='social2'>
+  
+  <li>
+    <a class="fa fa-android fa-2x" href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjbjt3R2dXZAhXBqI8KHXJaDSMQFggxMAE&url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dmitrev.in.mitrev18%26hl%3Den&usg=AOvVaw0DT5fGdG4rQcdG_zDQc3ng">
+      <span>Google Play Store</span>
+    </a>
+  </li>
+  
+  <li>
+    <a class="fa fa-apple fa-2x" href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwifp9He2dXZAhWIRo8KHauFCiUQFggrMAE&url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Frevels-18%2Fid1347799992%3Fmt%3D8&usg=AOvVaw1t8DS_xZ2TxmNckXGV5745">
+      <span>Apple App Store</span>
+    </a>
+  </li>
+  
+</ul>
+</div>
+<div class="svg-wrapper animated bounceIn" id="cate">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+  </svg>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EVENTS</a></div>
+</div>
+<div class="svg-wrapper1 animated bounceIn delay-2" id="teambt">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+  </svg>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a>&nbsp;MEET THE TEAM</a></div>
+</div>
+<div class="svg-wrapper2 animated bounceIn delay-1">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+  </svg>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a id="sch">&nbsp;&nbsp;&nbsp;&nbsp;SCHEDULE</a></div>
+</div>
+<div class="svg-wrapper3 animated bounceIn delay-3" id="sponsbtn">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+  </svg>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a>&nbsp;&nbsp;&nbsp;&nbsp;SPONSORS</a></div>
+</div>
+<div class="svg-wrapper4 animated bounceIn delay-5">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+  </svg>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a href="http://proshow.mitrevels.in" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROSHOW</a></div>
+</div>
+<div class="svg-wrapper5 animated bounceIn delay-4" id="conv">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+  </svg>
+   <div class="text" style="font-family: Questrial, sans-serif;"><a >&nbsp;&nbsp;&nbsp;CONTACT US</a></div>
+</div>
+<div id="category" class="nactive"> 
+
+		<span class="close">&times;</span>
+
+
+
+
+
+			
+			<div class="logo">
+
+				
+				<div class="logo-img">
+					<div id="left-event">
+						<i class="fa fa-angle-up fa-4x upnav" id="unav"></i>
+						<i class="fa fa-chevron-circle-left fa-4x upnav" id="lnav1"></i>
+						
+						<i class="fa fa-chevron-circle-right fa-4x downnav" id="rnav1"></i>
+						<i class="fa fa-angle-down fa-4x downnav" id="dnav"></i>
+						<div class="logo-img-cont animated fadeInUp anim"></div>
+					</div>
+					<div id="right-event">
+				<!-- 		<div id="category-detail" class="cont-c animated">
+							<span id="category-name" class="title-c"></span>
+							<span id="cat-desc"></span>
+						</div>
+ -->
+
+						<div id="event-detail" class="cont-c animated">
+							<span id="event-name-title" class="title-c"></span>
+							<div id="cont-event">
+								<span id="event-desc"></span><br>
+								<span id="team-size"></span>
+								<span id="poc"></span>
+							</div>
+						</div>
+
+
+						<div class="events-name" >
+							
+							<i class="fa fa-chevron-circle-left fa-4x leftnav" id="lnav"></i>
+								<span id="event-name"></span>
+							<i class="fa fa-chevron-circle-right fa-4x rightnav" id="rnav"></i>
+
+						</div>
+					</div>
+							</div>
+
+				
+			</div>
+		
+
+	</div>
+
+
+	<div id="schedule-cont" class="nactive animated zoomIn">
+		<div id="view-schd">
+			<div class="title">
+        <i class="fa fa-angle-left fa-4x" id="back-schd-home"></i>
+				<span id="sch-title">Schedule</span>
+			</div>
+			<div class="grid-cont">
+				<div id="day1" class="grid-item"><strong>Day 1</strong></div>
+				<div id="day2" class="grid-item"><strong>Day 2</strong></div>
+				<div id="day3" class="grid-item"><strong>Day 3</strong></div>
+				<div id="day4" class="grid-item"><strong>Day 4</strong></div>
+			</div>
+		</div>
+
+		<div id="event-schedule" class="nactive">
+			<div class="title">
+				<i class="fa fa-angle-left fa-4x" id="back-schd"></i>
+				<span id="day-title"></span>
+			</div>
+		
+			<div id="schedule-day-cont">
+				
+			</div>
+		</div>
+	</div>
+
+
+        <div class="team-row nactive animated zoomIn" id="teamvaladiv">
+          <span class="close" id="meetclose" style="z-index: 6; color: white;">&times;</span>
+            <div class="carouselbody">
+                <h1 class="cartitle"> Meet The Team </h1>
+                <div id="carousel">
+                    <figure id="spinner">
+                        <figure>
+                            <img src="./pics/archit.jpg" alt="">
+                            <figcaption>
+                                <p class="name"> ARCHIT </p>
+                                <p class="post"> <i>System Admin &amp; Web Dev</i> </p>
+                                <div class="links"> </div>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./pics/utkarsh.jpg" alt="">
+                            <figcaption>
+                                <p class="name"> UTKARSH AGARWAL </p>
+                                <p class="post"> System Admin &amp; Web Dev </p>
+                                <div class="links"> </div>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./pics/pics/sarthak.jpg" alt="">
+                            <figcaption>
+                                <p class="name"> SARTHAK BHOL </p>
+                                <p class="post"> System Admin &amp; Web Dev </p>
+                                <div class="links"> </div>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./pics/pics/nihar.jpg" alt="">
+                            <figcaption>
+                                <p class="name"> NIHAR RAO </p>
+                                <p class="post"> System Admin &amp; Web Dev </p>
+                                <div class="links"> </div>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./pics/kshitij.jpg" alt="">
+                            <figcaption>
+                                <p class="name"> KSHITIJ RANA </p>
+                                <p class="post"> System Admin &amp; Web Dev </p>
+                                <div class="links"> </div>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./pics/pics/divyanshu.jpg" alt="">
+                            <figcaption>
+                                <p class="name"> DIVYANSHU SINGH </p>
+                                <p class="post"> System Admin &amp; Web Dev </p>
+                                <div class="links"> </div>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./pics/datta.jpg" alt="A ballerina photographed in ">
+                            <figcaption>
+                                <p class="name"> DATTATREYA NAYAK </p>
+                                <p class="post"> System Admin &amp; Web Dev </p>
+                                <div class="links"> </div>
+                            </figcaption>
+                        </figure>
+                    </figure>
+                </div>
+                <p class="controls"> Use the <b>left</b> and <b>right</b> arrow keys. Click to Focus. </p>
+            </div>
+        </div>
+        <div class="sponsors nactive animated bounceIn" style="background-color: rgba(0,0,0,0.8);">
+
+            <h1 id="stitle" style="color: white;">Our Sponsors</h1>
+            <span class="sclose" style="color: white;">&times;</span>
+
+            <div class="sp1">
+                <img class="spimg1" src="oncampus.png">
+            </div>
+            <br>
+            <p class="st1" style="font-size: 2.4em;">Title Sponsor</p>
+
+            <div class="sp2">
+                <img class="spimg2" src="ps.png">
+            </div>
+            <br>
+            <p class="st2" style="font-size: 2.4em;">Gaming Patner</p>
+
+
+            <div class="sp3">
+                <img class="spimg3" style="background-color:wheat;" src="hoteltranquil.PNG">
+            </div>
+            <br>
+            <p class="st3" style="font-size: 2.4em;">Hospitality Partner</p>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="contactus" class="nactive">
+
+      <span class="close" style="color: white;">&times;</span>
+      <div class="animatedrev1 fadeInDownrev1" style="font-size:70px;font-family:'Questrial',sans-serif;">
+      </div>
+      <div id="contactus_container">
+      <div style="width:100%;margin-bottom: 5%;">
+    <p align="left" style="font-family:'Questrial', sans-serif;font-size:40px;font-weight:100;color:white;display:none;left:10%;position: relative;"class="appear" id="ct">CULTURAL TEAM</p>
+    <p align="right" style="font-family:'Questrial', sans-serif;font-size:40px;font-weight:100;color:white;display:none;left:45%;position:relative;"class="appear" id="st">SPORTS TEAM</p>
+  </div>
+    <br>
+    <br>
+    <div class="animatedrev1 fadeInDownrev2" id="dabba" style="display: none;">
+
+    <ul align="center" class="ul1" style="margin-right:80px;">
+  <li class="cf1"> <a href="#" align="center" style="color:white;"><button>RITI SHARMA</button></a> </li>
+  <li> <a href="#" align="center" style="color:white;"><button>ANIRUDH KAMATH</button></a></li>
+  <li> <a href="http://proshow.mitrevels.in" align="center" style="color:white;"><button>PARTH GUPTA</button></a> </li>
+  <li> <a href="http://revelscup.mitrevels.in" align="center" style="color:white;"><button>SOWMYA YALLA</button></a> </li>
+  <li  id="dontdisp" class="highlighted" align="center" style="color:white;"> <a href="#"><button>RESULTS</button></a> </li>
+  <li> <a href="#" align="center" style="color:white;"><button>SUSHRUT</button></a> </li>
+  <li> <a href="#" align="center" style="color:white;"><button>PARIDHI SHIROHI</button></a></li>
+  <li> <a href="#" align="center" style="color:white;"><button>SAHIL TEEKAY</button></a></li>
+  <li> <a href="#" align="center" style="color:white;"><button>DEEPIKA </button></a></li>
+</ul>
+</div>
+</div>
+<script>
+  document.getElementById('dontdisp').style.opacity=0;
+</script>
+</div>
+</body>
+
+</html>
