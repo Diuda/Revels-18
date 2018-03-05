@@ -8,6 +8,7 @@ var event = ['#f15e64', '#597cbe', '#ed1e24', '#dc9965', '#f5b716', '#74b8a9', '
 var cat = ['anim', 'anub', 'cres', 'dram', 'eqiq', 'ergo', 'foot', 'hc', 'ire', 'kal', 'lens', 'open', 'gam', 'ps', 'psy', 'sports', 'xven'];
 var count = 0;
 var count2 = 0;
+
 var categorydetails;
 var alleventsdetail;
 var eventdetails= [];
@@ -61,7 +62,7 @@ $(document).ready(function(){
 
 
 	$('#sponsbtn').on('click', function(){
-		// console.log("hello")
+
 		$('.sponsors').removeClass('nactive');
 		$('.sponsors').addClass('active');
 	})
@@ -93,6 +94,7 @@ $(document).ready(function(){
 		$('#event-schedule').addClass('active')
 		// $('#schedule-day-cont').empty()
 		$('#schedule-day-cont').each(function(i, ele){
+
 			// console.log(i +": "+ele)
 		})
 		$('#day-title').text(day)
@@ -102,6 +104,7 @@ $(document).ready(function(){
 		$('#schedule-day-cont').append("<div class='grid-schd-cont'> <div class='grid-schd-item'>"+sch.stime+" - "+sch.etime+"</div><div class='grid-schd-item'><i class='fa fa-calendar' style='padding-right: 1em;'></i><strong>&nbsp;&nbsp;&nbsp;"+sch.ename+"</strong><br><i class='fa fa-compass' style='padding-right: 1em;'></i>&nbsp;"+sch.venue+"<br> Round: "+sch.round+"</div></div>")
 		})
 		$('#schedule-day-cont').append("<br><br><b><br><br><br><br><br><br><br><br>")
+
 		
 	})
 
@@ -156,6 +159,7 @@ $(document).ready(function(){
 		$('#category-detail').remove()
 		
 		// $('#event-detail').addClass('slideInRight')
+
 		// count2++;
 		if(count2 == eventdetails.length-1){
 			// console.log("whadup")
@@ -172,10 +176,12 @@ $(document).ready(function(){
 		// $('#team-size').text("Max Team Size: "+eventdetails[count2].emaxteamsize)
 		// $('#poc').html("Contact Name: "+eventdetails[count2].cntctname+"<br/>Contact No: "+eventdetails[count2].cntctno)
 		// console.log(count2)
+
 	})
 
 	$('.leftnav').on('click', function(){
 		// console.log("hello")
+
 
 		// $('#event-name').text(eventdetails[--count2].ename)
 		$('#event-detail').remove()
@@ -192,6 +198,7 @@ $(document).ready(function(){
 
 
 		// console.log(count2)
+
 	})
 
 	$('.upnav').on('click', function(){
@@ -200,6 +207,7 @@ $(document).ready(function(){
 		$('#category-detail').remove()
 		$('.logo-img-cont').remove();
 		$('#event-detail').remove();
+
 		count--;
 		count2 = 0;
 		// $('.logo-img-cont').removeClass(cat[count--])
@@ -226,7 +234,7 @@ $(document).ready(function(){
 	})	
 
 	$('#event-name').on('click', function(){
-		// console.log("Event name")
+
 
 		$('#category-detail').remove()
 		$('#event-detail').remove()
@@ -271,19 +279,20 @@ function categorydetail(){
 	$.ajax({
 		type: 'GET',
 		url: 'https://mitrevels.in/api/categories/',
+
 		success: function(category) {
 			category.data.sort(predicateBy('cname'))
 			// console.log(category.data[14].cid)
 			categorydetails = category.data;
-			// categorydetails.splice(14, 1)
-			// categorydetails.splice(11,1)
 		
 		// }
 			// console.log(categorydetails)
 			eventdetail();
+
 			$('#category-name').text(categorydetails[count].cname)
 			$('#cat-desc').text(categorydetails[count].cdesc)
 			$('#right-event').append('<div id="category-detail" class="cont-c animated"><span id="category-name" class="title-c">'+categorydetails[count].cname+'</span><span id="cat-desc">'+categorydetails[count].cdesc+'</span></div>')
+
 			// $('#right-event').append('<div class="events-name"><i class="fa fa-chevron-circle-left fa-4x leftnav" id="lnav"></i><span id="event-name"></span><i class="fa fa-chevron-circle-right fa-4x rightnav" id="rnav"></i></div>')
 		}
 	})
@@ -291,22 +300,26 @@ function categorydetail(){
 }
 
 function eventdetail(){
+
 	eventdetails.length = 0;
 	$.ajax({
 		type: 'GET',
 		url: 'https://mitrevels.in/api/events/',
 		success: function(events) {
 			// console.log(events.data[count])
+
 			events.data.sort(predicateBy('ename'))
 			// category.data.forEach(function(ele){
 			// 	console.log(ele.cname)
 			// 	$('#category-name').text(ele.cname)
 			// })
 			alleventsdetail = events.data;
+
 			// console.log(alleventsdetail)
 			searchevent(categorydetails[count].cid)
 
 			$('#event-name').text(eventdetails[count2].ename)
+
 			
 		}
 	})
@@ -315,7 +328,9 @@ function eventdetail(){
 function schedule(){
 	$.ajax({
 		type: 'GET',
+
 		url: 'https://mitrevels.in/api/schedule/',
+
 		success: function(scheduledata){
 			allschedule = scheduledata.data;
 		}
@@ -327,7 +342,8 @@ function daywiseevent(day){
 	dayschedule.length = 0;
 	allschedule.forEach(function(scheduled){
 		if(scheduled.day == day){
-			// console.log(scheduled)
+
+
 			dayschedule[c++] = scheduled;
 		}
 
@@ -350,7 +366,9 @@ function predicateBy(prop){
 
 function searchevent(i){
 	var c = 0;
+
 	eventdetails.length = 0;
+
 	// eventdetails.length = 0;
 	// eventdetails.splice(0, eventdetails.length);
 	// console.log(eventdetails)
@@ -361,6 +379,5 @@ function searchevent(i){
 			
 		}
 	})
-	// console.log(eventdetails)
 }
 

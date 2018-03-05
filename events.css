@@ -124,6 +124,18 @@
     	padding-left: 5em;
     	padding-top: 1.2em;
     }
+<<<<<<< HEAD
+=======
+
+    #lnav2 {
+		left: -10%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -10%;
+		top: 20%;
+	}
+>>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
 }
 
 
@@ -144,6 +156,17 @@
 		bottom: 12%;
 		left: 77%;
 	}
+<<<<<<< HEAD
+=======
+	#lnav2 {
+		left: -8%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -8%;
+		top: 20%;
+	}
+>>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
 
 }
 
@@ -152,8 +175,12 @@
 	.close
     {
     	padding-left: 7em;
+<<<<<<< HEAD
     	/*padding-top: 1.4em;*/
     	margin-top: -30px;
+=======
+    	padding-top: 1.4em;
+>>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
     }
 
     #lnav1{
@@ -161,6 +188,18 @@
 		left: 14%;
 	}
 
+<<<<<<< HEAD
+=======
+	#lnav2 {
+		left: -8%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -8%;
+		top: 20%;
+	}
+
+>>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
 }
 
 
@@ -176,4 +215,15 @@
 		left: 12%;
 	}
 
+<<<<<<< HEAD
+=======
+	#lnav2 {
+		left: -8%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -8%;
+		top: 20%;
+	}
+>>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
 }

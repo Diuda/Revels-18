@@ -142,7 +142,9 @@ body{
 .social li:last-child a { border-radius: 0 0 5px 0 }
     
 .social li a span {
+
   width: 110px;
+
   float: left;
   text-align: center;
   background: #222;
@@ -441,6 +443,7 @@ a:link, a:visited{
 
 @media screen and (max-width: 360px){
 
+
     .svg-wrapper {
         height: 60px;
   
@@ -449,7 +452,9 @@ a:link, a:visited{
   margin:20px auto;
   transform: translateY(-50%);
   width: 100%;
+
   left:4vh;
+
 }
     .svg-wrapper1 {
         height: 60px;
@@ -458,7 +463,9 @@ a:link, a:visited{
   margin:20px auto;
   transform: translateY(-50%);
   width: 100%;
+
   left:4vh;
+
 }
     .svg-wrapper2 {
         height: 60px;
@@ -467,7 +474,9 @@ a:link, a:visited{
   margin:20px auto;
   transform: translateY(-50%);
   width: 100%;
+
   left:4vh;
+
 }
     .svg-wrapper3 {
         height: 60px;
@@ -476,7 +485,9 @@ a:link, a:visited{
   margin:20px auto;
   transform: translateY(-50%);
   width: 100%;
+
   left:4vh;
+
 }
     .svg-wrapper4 {
         height: 60px;
@@ -485,7 +496,9 @@ a:link, a:visited{
   margin:20px auto;
   transform: translateY(-50%);
   width: 100%;
+
   left:4vh;
+
 }
     .svg-wrapper5 {
         height: 60px;
@@ -494,6 +507,7 @@ a:link, a:visited{
   margin:20px auto;
   transform: translateY(-50%);
   width: 100%;
+
   left:4vh;
 }
 .shape {
@@ -605,6 +619,7 @@ a:link, a:visited{
   transform: translateY(-50%);
   width: 100%;
   left:2vh;
+
 }
 .shape {
   fill: transparent;

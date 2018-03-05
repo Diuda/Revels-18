@@ -27,6 +27,7 @@
 }
 
 body{
+
   font-family: Questrial;
   margin: 0;
 }
@@ -57,7 +58,9 @@ body{
 #contactus{
   width:100%;
   height:100%;
+
   background-color: rgba(0,0,0,0.8);
+
   position: absolute;
   top: 0;
   overflow-y: scroll;
@@ -91,9 +94,11 @@ body{
 
 #event-schedule{
   width: 100%;
+
   height: 100%;
   position: absolute;
   overflow-y: hidden;
+
 }
 
 
@@ -164,18 +169,20 @@ body{
   margin: 15% auto;
   width: 100%;
   font-family: 'Questrial', sans-serif;
-  /*overflow-y: scroll;*/
+
 }
 
 
 #event-desc{
   position: absolute;
   text-align: center;
+
   font-size: 1.3em;
   margin: 2% auto;
   width: 100%;
   font-family: 'Questrial', sans-serif; 
   /*overflow-y: scroll;*/
+
 }
 
 #team-size{
@@ -190,7 +197,9 @@ body{
 #poc{
   position: absolute;
   text-align: center;
+
   font-size: 1.3em;
+
   margin: 25% auto;
   width: 100%;
   font-family: 'Questrial', sans-serif; 
@@ -249,6 +258,7 @@ body{
   width: 100%;
   height:100%;
   overflow-y: scroll;
+
 }
 
 .upnav{
@@ -360,6 +370,7 @@ body{
 
 .cres{
   background: url('logos/Crescendo.svg') center no-repeat
+
 }
 
 
@@ -424,12 +435,7 @@ body{
 }
 
 
-/*.box {
-    width:70%;
-    height:40em;
-    background:#FFF;
-    margin:40px auto;
-}*/
+
 
 /*.effect5{
   position: relative;
@@ -738,6 +744,7 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
+
   background: rgba(0,0,0,0.8);
   top: 0;
   font-family: 'Questrial', sans-serif;
@@ -1035,8 +1042,10 @@ html {
             font-style: normal;
             font-variant: normal;
             font-weight: 100;
+
             margin-top: 5%;
             /*margin-left:4%;*/
+
 
          }
          
@@ -1120,9 +1129,11 @@ html {
   -moz-perspective: 780px;
   -webkit-perspective: 780px;
   perspective: 780px;
+
   background-color: transparent;
   width:100%;
   margin-left: -40px;
+
 }
  
 .ul1 li a {
@@ -1134,6 +1145,7 @@ html {
 
  
 .ul1 li {
+
     text-indent: 0px;
     position: relative;
     display: inline-block;
@@ -1155,6 +1167,7 @@ html {
     transition: all .45s;
     opacity: 1;
     box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 0 30px rgba(0,0,0,0.2);
+
 }
  
 .ul1 li:last-child,
@@ -1163,10 +1176,12 @@ html {
 .ul1 li:nth-child(2),
 .ul1 li:nth-child(5) { z-index: 46; }
  
+
 .ul1 li:nth-child(3) { z-index: 50; }
 .ul1 li:nth-child(4),.ul1 li:nth-child(6) { z-index: 53; }
 .ul1 li:nth-child(3) { z-index: 50; }
 .ul1 li:nth-child(7){z-index: 52;}
+
  
 .ul1 li.highlighted {
   -moz-transform: rotateY(0deg) scale(1.2);
@@ -1224,6 +1239,7 @@ html {
   left: 0;
   -webkit-mask-image: -webkit-gradient(linear, left 10%, left bottom, from(rgba(0,0,0,.5)), to(rgba(0,0,0,0)));
 }
+
 .ul1 li:nth-child(4) { background-image: url(conveners/yalla.jpg); }
  
 .ul1 li:nth-child(3) { background-image: url(conveners/parth.jpg); }
@@ -1237,6 +1253,7 @@ html {
 .ul1 li:nth-child(7) { background-image: url(conveners/paridhi.jpg); }
 .ul1 li:nth-child(8) { background-image: url(conveners/sahil.jpg); }
 .ul1 li:nth-child(9) { background-image: url(conveners/deepika.jpg); }
+
 .ul1 li:nth-child(5) { background-image: url(op.png); }
 button{
   background-color:black;
@@ -1292,15 +1309,19 @@ div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
 @media screen and (max-width:1920px){
 
 #contactus_container{
+
   /*margin-left: 10%;*/
 }
 }
 @media screen and (max-width:1440px){
+
    .nav2 a{
     padding:15px 91px;
   }
   #contactus_container{
+
     /*margin-left:4%;*/
+
   }
 
 }
@@ -1463,12 +1484,14 @@ transform:translateY(0px);
     
 
 }
+
 #st{
   left:16% !important;
 }
 #dontdisp{
   display: none;
 }
+
 .animatedrev1 {
             -webkit-animation-duration: 5s;
             animation-duration: 5s;
@@ -1518,7 +1541,9 @@ transform:translateY(0px);
             animation-name: fadeInDown2;
          }
          .ul1{
+
           margin-left:-15px;
+
           margin-bottom:10px;
           -moz-perspective: 0px;
           -webkit-perspective: 0px;
@@ -1540,7 +1565,9 @@ transform:translateY(0px);
 
          }
          .ul1 li{
+
           width:280px;
+
           
          }
          .ul1 li a{
