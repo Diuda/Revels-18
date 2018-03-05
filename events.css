@@ -63,12 +63,12 @@
     color: #dee6bf;
 	}
 
-	#lnav, #rnav, #unav, #dnav 
+	#lnav, #rnav, #unav, #dnav, #rnav2 
 	{
        display: none;
     }
 	
-	#lnav1, #rnav1, #lnav2, #rnav2 {
+	#lnav1, #rnav1, #lnav2{
 		display: block;
 	}
 
@@ -109,32 +109,50 @@
 	#event-name {
     text-align: center;
     position: absolute;
-    font-size: 2em;
-    margin: 12% 10%;
+    font-size: 1.5em;
+    margin: 11% 10%;
     width: 80%;
     color: #dee6bf;
 }
 }
 
 /* Samsung Galaxy S5 ----------- */
-@media only screen and (max-width: 360px) {
+@media only screen and (min-width: 360px) {
 
 .close
     {
-    	padding-left: 5em;
-    	padding-top: 1.2em;
+    	padding-left: 4em;
+    	padding-top: 1.8em;
     }
 <<<<<<< HEAD
 =======
+	
+	
 
     #lnav2 {
-		left: -10%;
+		left: -5%;
 		top: 20%;
 	}
 	#rnav2 {
-		right: -10%;
+		right: -5%;
 		top: 20%;
+		display: none;
+		
 	}
+
+	
+	#poc {
+		
+		margin-top: 30%;
+    	font-size: 1.5em;
+
+	} 
+		
+	#team-size {
+		margin-top: 25%;
+		 
+	}
+
 >>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
 }
 
@@ -165,7 +183,20 @@
 	#rnav2 {
 		right: -8%;
 		top: 20%;
+		display: block;
 	}
+
+	
+	#poc {
+		margin-top: 38%;
+
+	} 
+		
+	#team-size {
+		margin-top: 30%;
+		 
+	}
+
 >>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
 
 }
@@ -197,8 +228,19 @@
 	#rnav2 {
 		right: -8%;
 		top: 20%;
+		display: block;
 	}
 
+	
+	#poc {
+		margin-top: 38%;
+
+	} 
+		
+	#team-size {
+		margin-top: 30%;
+		 
+	}
 >>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
 }
 
@@ -206,13 +248,17 @@
 @media only screen and (max-width: 412px) {
 	.close
     {
-    	padding-left: 6em;
+    	padding-left: 6.3em;
     	padding-top: 1.4em;
     }
 
     #lnav1{
 		top: 13%;
 		left: 12%;
+	}
+	#rnav1{
+		top: 35%;
+    	left: 79%;
 	}
 
 <<<<<<< HEAD
@@ -224,6 +270,62 @@
 	#rnav2 {
 		right: -8%;
 		top: 20%;
+		display: block;
+	}
+
+	
+	#poc {
+		margin-top: 38%;
+		font-size: 1em;
+
+	} 
+		
+	#team-size {
+		margin-top: 30%;
+		 
 	}
 >>>>>>> b2d7d88f5bbe996484f86f9af488af5cff39b164
+}
+
+/*------MOTOG4+--------*/
+@media only screen and (max-width: 360px) {
+
+	.close
+    {
+    	padding-left: 6em;
+    	padding-top: 1em;
+    }
+
+    #lnav1{
+		top: 12%;
+		left: 12%;
+	}
+	#rnav1{
+		top: 35%;
+    	left: 79%;
+	}
+
+	#lnav2 {
+		left: -8%;
+		top: 20%;
+	}
+	#rnav2 {
+		right: -8%;
+		top: 20%;
+		display: block;
+	}
+
+	#poc {
+		margin-top: 28%;
+		font-size: 1em;
+
+	} 
+		
+	#team-size {
+		margin-top: 22%;
+		 
+	}
+
+
+
 }
