@@ -127,6 +127,7 @@ body{
   /*top: 25%;*/
   /*left: 20%;*/
   background-color: #9A233A;
+  overflow: hidden;
 }
 
 #lnav1, #rnav1 {
@@ -144,7 +145,7 @@ body{
 .title-c{
     text-align: center;
   position: absolute;
-  font-size: 4em;
+  font-size: 3em;
   margin: 2% auto;
   width: 100%;
   color: #dee6bf;
@@ -157,7 +158,7 @@ body{
 #cat-desc{
   position: absolute;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.2em;
   margin: 15% auto;
   width: 100%;
   font-family: 'Questrial', sans-serif;
@@ -168,7 +169,7 @@ body{
 #event-desc{
   position: absolute;
   text-align: center;
-  font-size: 2em;
+  font-size: 0.85em;
   margin: 2% auto;
   width: 100%;
   font-family: 'Questrial', sans-serif; 
@@ -307,7 +308,7 @@ body{
 #event-name{
   text-align: center;
   position: absolute;
-  font-size: 4em;
+  font-size: 3em;
   margin: 3% auto;
   width: 100%;
   color: #dee6bf;
@@ -780,12 +781,14 @@ html {
 
 /* --------Sponsors-------- */
 
+
 .sponsors {
-/*  position: absolute;
+  position: absolute;
   width: 100%;
-  height: 100%;*/
-  overflow: none;
+  height: 100%;
+  overflow: hidden;
   background-color: #fff;
+
 }
 
 #stitle {
@@ -806,6 +809,67 @@ html {
     width: 100%;
     height: 40vh;
 }
+.st1 {
+    text-align: center;
+    margin-left: -2%;
+    margin-top: 0%;
+}
+
+
+.sp2 {
+
+  /* display: inline-flex;*/
+    width: 20vw;
+    height: 30vh;
+    margin-left: 12%;
+    position: initial;
+}
+
+.spimg2 {
+    
+    height: 20vh;
+    margin-left: 0%;
+}
+
+.st2 {
+    margin-top: -4%;
+    margin-left: 17%;
+}
+
+.sp3 {
+
+    /*display: inline-flex;*/
+    position: absolute;
+    width: 20vw;
+    height: 30vh;
+    margin-left: 65%;
+    margin-top: -12%;
+}
+.spimg3 {
+    
+    height: 20vh;
+    margin-left: -15%;
+}
+
+.st3 {
+   
+    margin-top: -3%;
+    margin-left: 69%;
+}
+ .sclose {
+
+    margin-left: 80%;
+    margin-top: -6%;
+    position: absolute;
+    z-index: 1;
+    padding-top: 0.8em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 1.2em;
+    font-size: 3em;
+    cursor: pointer;
+ }
+
 
 <<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900|Montez);
@@ -1836,65 +1900,5 @@ h1 {
 
 
 
-
-=======
-.st1 {
-    text-align: center;
-    margin-left: -2%;
-    margin-top: 0%;
-}
 >>>>>>> 528469da9306fc224acbb3dbea028d11a7af99a5
 
-.sp2 {
-
-  /* display: inline-flex;*/
-    width: 20vw;
-    height: 30vh;
-    margin-left: 12%;
-    position: initial;
-}
-
-.spimg2 {
-    width: 100%;
-    height: 20vh;
-    margin-left: 0%;
-}
-
-.st2 {
-    margin-top: -4%;
-    margin-left: 17%;
-}
-
-.sp3 {
-
-    /*display: inline-flex;*/
-    position: absolute;
-    width: 20vw;
-    height: 30vh;
-    margin-left: 65%;
-    margin-top: -12%;
-}
-.spimg3 {
-    width: 100%;
-    height: 20vh;
-    margin-left: 0%;
-}
-
-.st3 {
-   
-    margin-top: -3%;
-    margin-left: 69%;
-}
- .sclose {
-
-    margin-left: 80%;
-    margin-top: -8%;
-    position: absolute;
-    z-index: 1;
-    padding-top: 0.8em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    padding-left: 1.2em;
-    font-size: 3em;
-    cursor: pointer;
- }

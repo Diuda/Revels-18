@@ -1,4 +1,4 @@
-@media only screen and (min-width: 360px) {
+@media only screen and (max-width: 800px) {
 
 	*
 	{
@@ -31,6 +31,17 @@
 	    top: -4%;
 	}
 
+	#event-desc {
+   
+    font-size: 0.66em;
+    margin: 2% auto;
+   
+}	
+
+	#poc, #team-size {
+		font-size: 1em; 
+	}
+
 	#cat-desc 
 	{
     position: absolute;
@@ -46,7 +57,7 @@
 	{
     text-align: center;
     position: absolute;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 2% auto;
     width: 100%;
     color: #dee6bf;
